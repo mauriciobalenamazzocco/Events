@@ -1,6 +1,6 @@
 import Foundation
 
-struct Event: Codable {
+struct Occurrence: Codable {
     var id: String?
     var date: Int64?
     var title: String?
