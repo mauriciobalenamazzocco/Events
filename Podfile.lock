@@ -1,0 +1,67 @@
+PODS:
+  - Kingfisher (5.14.1):
+    - Kingfisher/Core (= 5.14.1)
+  - Kingfisher/Core (5.14.1)
+  - R.swift (5.2.2):
+    - R.swift.Library (~> 5.2.0)
+  - R.swift.Library (5.2.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - SpinCommon (0.20.0)
+  - SpinRxSwift (0.20.0):
+    - RxRelay (>= 5.1.1)
+    - RxSwift (>= 5.1.1)
+    - SpinCommon (>= 0.20.0)
+  - SwiftLint (0.39.2)
+  - XCoordinator (2.0.7):
+    - XCoordinator/Core (= 2.0.7)
+  - XCoordinator/Core (2.0.7)
+
+DEPENDENCIES:
+  - Kingfisher
+  - R.swift
+  - RxSwift
+  - SpinCommon (from `https://github.com/Spinners/Spin.Swift`)
+  - SpinRxSwift (from `https://github.com/Spinners/Spin.Swift`)
+  - SwiftLint
+  - XCoordinator
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - R.swift
+    - R.swift.Library
+    - RxRelay
+    - RxSwift
+    - SwiftLint
+    - XCoordinator
+
+EXTERNAL SOURCES:
+  SpinCommon:
+    :git: https://github.com/Spinners/Spin.Swift
+  SpinRxSwift:
+    :git: https://github.com/Spinners/Spin.Swift
+
+CHECKOUT OPTIONS:
+  SpinCommon:
+    :commit: 28d99bf161d62dafb866c7a5dc095c3e49ea21be
+    :git: https://github.com/Spinners/Spin.Swift
+  SpinRxSwift:
+    :commit: 28d99bf161d62dafb866c7a5dc095c3e49ea21be
+    :git: https://github.com/Spinners/Spin.Swift
+
+SPEC CHECKSUMS:
+  Kingfisher: 8050bc6f7f68cbf3908bd04df7ccbac188f6d6d6
+  R.swift: 7c52cdc57a66840ffe6cbd8a823d732059d42a32
+  R.swift.Library: 5ba4f1631300caf9a4d890186930da85d540769d
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  SpinCommon: 375d5c9f24a333943d8f71cada9c8c4d4cb4d3cb
+  SpinRxSwift: 0b3d9b610f8e8265f4c1fb3ede97d6ed5a9b58ef
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+  XCoordinator: 9ee654fedef1ffede33d5c11677708a555c00542
+
+PODFILE CHECKSUM: 10edc1c571d97493b123d6aa6c35c83e6a54581a
+
+COCOAPODS: 1.9.3
