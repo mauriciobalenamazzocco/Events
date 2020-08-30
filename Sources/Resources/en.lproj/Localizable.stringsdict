@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>tryAgain</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Tentar novamente</string>
+	</dict>
+	<key>somethingWrong</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Ops... Algo deu errado!</string>
+	</dict>
+</dict>
+</plist>

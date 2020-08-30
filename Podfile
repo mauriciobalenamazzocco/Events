@@ -12,8 +12,9 @@ target 'Events' do
   pod 'SpinRxSwift', :git => 'https://github.com/Spinners/Spin.Swift'
 
   # RxSwift
-  pod 'RxSwift'
-
+  pod 'RxSwift', '5.1.1'
+  pod 'RxCocoa', '5.1.1'
+  
   # Coordinator
   pod 'XCoordinator'
 
@@ -25,6 +26,9 @@ target 'Events' do
 
   # Resources
   pod 'R.swift'
+
+  # Constraints
+  pod 'VanillaConstraints'
 
   target 'EventsTests' do
     inherit! :search_paths
