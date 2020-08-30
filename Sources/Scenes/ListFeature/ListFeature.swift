@@ -14,7 +14,7 @@ class ListFeature<T> {
 extension ListFeature {
     enum State {
         case idle
-        case refreshing(filter: String, initial: Bool)
+        case refreshing(filter: String, initial: Bool) //Used filter make a search
         case refreshed(ListPage<T>)
         case loadingPage(page: UInt, filter: String)
         case loadedPage(ListPage<T>)
@@ -24,7 +24,7 @@ extension ListFeature {
     enum Event {
         case refresh(filter: String, initial: Bool)
         case refreshed(ListPage<T>)
-        case loadPage(page: UInt, filter: String)
+        case loadPage(page: UInt, filter: String)  //Used filter make a search
         case pageLoaded(ListPage<T>)
         case errored(Error)
     }
