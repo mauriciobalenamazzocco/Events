@@ -53,7 +53,8 @@ where
         return refreshControl
     }()
     private lazy var nextPageProgressIndicator: UIActivityIndicatorView = {
-        let progress = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
+        let progress = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+        progress.color = R.color.primaryColor()
         progress.frame = .init(x: 0, y: 0, width: 44, height: 44)
         return progress
     }()

@@ -71,7 +71,7 @@ class StatusBackgroundView: UIView {
     }()
     private let button: UIButton = {
         let button = UIButton(type: .custom)
-        button.backgroundColor =  R.color.primaryColor()
+        button.backgroundColor = R.color.primaryColor()
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         button.contentEdgeInsets = UIEdgeInsets(top: 8, left: 12, bottom: 8, right: 12)
