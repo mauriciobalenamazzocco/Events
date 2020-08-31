@@ -6,7 +6,7 @@ import SpinRxSwift
 class ListEventFeature: ListFeature<Occurrence> {
     typealias ListFeatureType = ListFeature<Occurrence>
 
-    private init(eventApi: EventAPIProtocol = EventAPI()) {
+    init(eventApi: EventAPIProtocol = EventAPI()) {
         let refresh = partial(ListEventFeature.refresh, arg1: eventApi, arg2: .partial)
         let loadPage = partial(ListEventFeature.loadPage, arg1: eventApi, arg2: .partial)
 
