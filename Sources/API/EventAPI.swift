@@ -66,7 +66,6 @@ struct EventAPI: EventAPIProtocol {
 }
 
 extension EventAPI {
-    static let api = "http://5b840ba5db24a100142dcd8c.mockapi.io/api"
-    static let apiEventPath = "\(api)/events" //This api is not pageable =(
-    static let apiEventDetailPath = "\(api)/events/%@"
+    static let apiEventPath = "\(API.path)/events" //This api is not pageable =(
+    static let apiEventDetailPath = "\(API.path)/events/%@"
 }
