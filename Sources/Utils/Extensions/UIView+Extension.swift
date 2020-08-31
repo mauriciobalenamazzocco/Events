@@ -1,11 +1,6 @@
 import UIKit
 
 extension UIView {
-    func superview<T>(of type: T.Type) -> T? {
-        return self.superview as? T
-            ?? self.superview?.superview(of: type)
-    }
-
     func shimmer(with time: CFTimeInterval = 1) {
         subviews.forEach { [weak self] subview in
             guard let self = self else { return }
