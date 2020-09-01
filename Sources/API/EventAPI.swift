@@ -6,8 +6,8 @@ protocol EventAPIProtocol {
     typealias EventsResponse = Result<[Occurrence], ServiceError>
     typealias EventResponse = Result<Occurrence, ServiceError>
 
-    func fetchAllEvents(completionHandler: @escaping (EventsResponse) -> Void)
-    func fetchEventDetail(id: String, completionHandler: @escaping (EventResponse) -> Void)
+    func fetchAllEvents(url: String, completionHandler: @escaping (EventsResponse) -> Void)
+    func fetchEventDetail(url: String, completionHandler: @escaping (EventResponse) -> Void)
 }
 
 struct EventAPI: EventAPIProtocol {
@@ -18,9 +18,9 @@ struct EventAPI: EventAPIProtocol {
         self.urlSession = urlSession
     }
 
-    func fetchAllEvents(completionHandler: @escaping (EventsResponse) -> Void ) {
+    func fetchAllEvents(url: String, completionHandler: @escaping (EventsResponse) -> Void ) {
 
-        guard let url = URL(string: EventAPI.apiEventPath) else {
+        guard let url = URL(string: url) else {
             completionHandler(.failure(.urlInvalid))
             return
         }
@@ -40,10 +40,10 @@ struct EventAPI: EventAPIProtocol {
         dataTask.resume()
     }
 
-    func fetchEventDetail(id: String,
+    func fetchEventDetail(url: String,
                           completionHandler: @escaping (EventResponse) -> Void ) {
 
-        guard let url = URL(string: String(format: EventAPI.apiEventPath, id)) else {
+        guard let url = URL(string: url) else {
             completionHandler(.failure(.urlInvalid))
             return
         }

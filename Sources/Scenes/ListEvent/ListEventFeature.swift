@@ -25,7 +25,7 @@ class ListEventFeature: ListFeature<Occurrence> {
 
         return Single.create { single in
 
-            eventAPI.fetchAllEvents { result in
+            eventAPI.fetchAllEvents(url: EventAPI.apiEventPath) { result in
                 switch result {
                 case let .success(events):
                     let listPage = ListPage<Occurrence>.first(items: events, hasNext: false)
@@ -44,7 +44,7 @@ class ListEventFeature: ListFeature<Occurrence> {
 
         return Single.create { single in
 
-            eventAPI.fetchAllEvents { result in
+            eventAPI.fetchAllEvents(url: EventAPI.apiEventPath) { result in
                 switch result {
                 case let .success(events):
                     let listPage = ListPage<Occurrence>.first(items: events, hasNext: false)

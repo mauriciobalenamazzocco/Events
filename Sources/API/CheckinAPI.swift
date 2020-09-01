@@ -3,7 +3,7 @@ import Foundation
 protocol CheckinAPIProtocol {
     typealias CheckinResult = Result<Void, ServiceError>
 
-    func checkin(id: String, email: String, name: String, completionHandler: @escaping (CheckinResult) -> Void)
+    func checkin(url:String, id: String, email: String, name: String, completionHandler: @escaping (CheckinResult) -> Void)
 }
 
 struct CheckinAPI: CheckinAPIProtocol {
@@ -14,14 +14,15 @@ struct CheckinAPI: CheckinAPIProtocol {
         self.urlSession = urlSession
     }
 
-    func checkin(id: String,
+    func checkin(url: String,
+                 id: String,
                  email: String,
                  name: String,
                  completionHandler: @escaping (CheckinResult) -> Void) {
 
         let checkin = Checkin(eventId: id, name: name, email: email)
 
-        guard let url = URL(string: CheckinAPI.checkinPath) else {
+        guard let url = URL(string: url) else {
             return completionHandler(.failure(.urlInvalid))
 
         }

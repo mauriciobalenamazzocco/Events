@@ -100,12 +100,11 @@ extension CheckinViewModel {
 
         return Single.create { single in
 
-            checkinAPI.checkin(id: eventId, email: email, name: name) { result in
+            checkinAPI.checkin(url: CheckinAPI.checkinPath, id: eventId, email: email, name: name) { result in
                 switch result {
                 case  .success:
                     broadcast.broadcast(message: .eventRegistred(id: eventId))
                     single(.success(.didRegister))
-  single(.success(.didRegister))
                 case let .failure(error):
                     single(.success(.didFail(error)))
                 }
