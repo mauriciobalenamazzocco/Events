@@ -286,16 +286,66 @@ struct R: Rswift.Validatable {
 
   /// This `R.string` struct is generated, and contains static references to 1 localization tables.
   struct string {
-    /// This `R.string.localizable` struct is generated, and contains static references to 2 localization keys.
+    /// This `R.string.localizable` struct is generated, and contains static references to 7 localization keys.
     struct localizable {
+      /// en translation: Eventos
+      ///
+      /// Locales: en
+      static let events = Rswift.StringResource(key: "events", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Não foi possivel fazer Parse do objeto
+      ///
+      /// Locales: en
+      static let errorParse = Rswift.StringResource(key: "errorParse", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Ops... Algo deu errado!
       ///
       /// Locales: en
       static let somethingWrong = Rswift.StringResource(key: "somethingWrong", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Registrado
+      ///
+      /// Locales: en
+      static let registred = Rswift.StringResource(key: "registred", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
       /// en translation: Tentar novamente
       ///
       /// Locales: en
       static let tryAgain = Rswift.StringResource(key: "tryAgain", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: Url da api é invalida
+      ///
+      /// Locales: en
+      static let errorInvalidUrl = Rswift.StringResource(key: "errorInvalidUrl", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+      /// en translation: ok
+      ///
+      /// Locales: en
+      static let ok = Rswift.StringResource(key: "ok", tableName: "Localizable", bundle: R.hostingBundle, locales: ["en"], comment: nil)
+
+      /// en translation: Eventos
+      ///
+      /// Locales: en
+      static func events(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("events", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "events"
+        }
+
+        return NSLocalizedString("events", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Não foi possivel fazer Parse do objeto
+      ///
+      /// Locales: en
+      static func errorParse(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("errorParse", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "errorParse"
+        }
+
+        return NSLocalizedString("errorParse", bundle: bundle, comment: "")
+      }
 
       /// en translation: Ops... Algo deu errado!
       ///
@@ -312,6 +362,21 @@ struct R: Rswift.Validatable {
         return NSLocalizedString("somethingWrong", bundle: bundle, comment: "")
       }
 
+      /// en translation: Registrado
+      ///
+      /// Locales: en
+      static func registred(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("registred", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "registred"
+        }
+
+        return NSLocalizedString("registred", bundle: bundle, comment: "")
+      }
+
       /// en translation: Tentar novamente
       ///
       /// Locales: en
@@ -325,6 +390,36 @@ struct R: Rswift.Validatable {
         }
 
         return NSLocalizedString("tryAgain", bundle: bundle, comment: "")
+      }
+
+      /// en translation: Url da api é invalida
+      ///
+      /// Locales: en
+      static func errorInvalidUrl(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("errorInvalidUrl", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "errorInvalidUrl"
+        }
+
+        return NSLocalizedString("errorInvalidUrl", bundle: bundle, comment: "")
+      }
+
+      /// en translation: ok
+      ///
+      /// Locales: en
+      static func ok(preferredLanguages: [String]? = nil) -> String {
+        guard let preferredLanguages = preferredLanguages else {
+          return NSLocalizedString("ok", bundle: hostingBundle, comment: "")
+        }
+
+        guard let (_, bundle) = localeBundle(tableName: "Localizable", preferredLanguages: preferredLanguages) else {
+          return "ok"
+        }
+
+        return NSLocalizedString("ok", bundle: bundle, comment: "")
       }
 
       fileprivate init() {}

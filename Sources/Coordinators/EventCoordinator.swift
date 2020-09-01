@@ -61,7 +61,7 @@ class EventCoordinator: NavigationCoordinator<EventCoordinatorRoute> {
                     self.trigger(.eventDetail(event))
                 }
             )
-            eventList.title = "Events"
+            eventList.title = R.string.localizable.events()
             eventList.bind(feature: ListEventFeature())
             return .push(eventList, animation: nil)
 

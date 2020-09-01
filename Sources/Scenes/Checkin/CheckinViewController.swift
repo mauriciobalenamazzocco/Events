@@ -31,7 +31,6 @@ class CheckinViewController: UIViewController, BindableType {
     }
 
     func bindViewModel() {
-
         viewModel.spin.render(on: self, using: { $0.render(state:) })
         viewModel.spin.start()
 
@@ -47,7 +46,6 @@ class CheckinViewController: UIViewController, BindableType {
         outputs.date
             .drive(checkinView.dateLabel.rx.text)
             .disposed(by: disposeBag)
-
 
         outputs.picture
             .drive(picture)
@@ -76,6 +74,24 @@ class CheckinViewController: UIViewController, BindableType {
             }).disposed(by: disposeBag)
 
     }
+
+    func showError(message: String) {
+        let alert = UIAlertController(
+            title: R.string.localizable.somethingWrong(),
+            message: message,
+            preferredStyle: UIAlertController.Style.alert
+        )
+
+        alert.addAction(
+            UIAlertAction(
+                title: R.string.localizable.ok(),
+                style: UIAlertAction.Style.default,
+                handler: nil
+            )
+        )
+
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
 extension CheckinViewController {
@@ -83,19 +99,19 @@ extension CheckinViewController {
         switch state {
 
         case .idle:
-             break
-        case .registering(_, _):
+            break
+        case .registering:
             checkinView.confirmButton.animate(animation: .collapse)
         case let .error(error):
+            checkinView.confirmButton.animate(animation: .expand)
             switch error {
             case .parse:
-                print("Parse Error")
+                self.showError(message: R.string.localizable.errorParse())
             case .urlInvalid:
-                print("Parse Error")
+                self.showError(message: R.string.localizable.errorInvalidUrl())
             case .api(let error):
-                print("Parse Error")
+                self.showError(message: error.localizedDescription)
             }
-             print("Error")
         case .registred:
             viewModel.coordinator.trigger(.close)
         case .securityFail(name: let name, email: let email):

@@ -3,6 +3,7 @@ import RxCocoa
 import RxSwift
 import SDWebImage
 
+// swiftlint:disable private_outlet
 class EventDetailView: UIView {
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

@@ -44,7 +44,6 @@ class EventCell: UITableViewCell, BindableType {
         pictureImageView.sd_cancelCurrentImageLoad()
     }
 
-    
     func bindViewModel() {
           let outputs = viewModel.transform(input:
               .init(

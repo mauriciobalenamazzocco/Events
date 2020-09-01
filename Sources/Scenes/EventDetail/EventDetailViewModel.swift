@@ -23,13 +23,12 @@ class EventDetailViewModel: ViewModelProtocol {
          coordinator: WeakRouter<EventCoordinatorRoute>,
          broadcast: EventBroadcastProtocol = EventBroadcast.shared) {
         self.coordinator = coordinator
-
         title = event.title
         price = event.price
         description = event.description
         eventId = event.id
         self.broadcast = broadcast
-        
+
         if let timestamp = event.date {
             date = timestamp.getDateStringFromUnixTime()
         }

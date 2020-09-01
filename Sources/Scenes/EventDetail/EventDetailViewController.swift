@@ -26,7 +26,7 @@ class EventDetailViewController: UIViewController, BindableType {
         eventDetailView.priceLabel.isHidden = true
         eventDetailView.checkinButton.isEnabled = false
         eventDetailView.checkinButton.backgroundColor = .lightGray
-        eventDetailView.checkinButton.setTitle("Registrado", for: .normal)
+        eventDetailView.checkinButton.setTitle(R.string.localizable.registred(), for: .normal)
         eventDetailView.checkinButton.layer.cornerRadius = 10
     }
 
@@ -56,6 +56,10 @@ class EventDetailViewController: UIViewController, BindableType {
         outputs.title
             .drive(eventDetailView.titleLabel.rx.text)
             .disposed(by: disposeBag)
+
+        outputs.title
+                   .drive(navigationItem.rx.title)
+                   .disposed(by: disposeBag)
 
         outputs.eventRegistred
         .drive(eventRegistred)

@@ -1,8 +1,8 @@
 import UIKit
 
 class EventShimmerCell: PlaceholderCell {
-    @IBOutlet weak var shimmerContainer: UIView!
-    @IBOutlet weak var roundView: UIView!
+    @IBOutlet weak private var shimmerContainer: UIView!
+    @IBOutlet weak private var roundView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

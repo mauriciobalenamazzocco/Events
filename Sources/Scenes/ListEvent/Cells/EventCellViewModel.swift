@@ -36,7 +36,8 @@ class EventCellViewModel: CellViewModelProtocol {
         eventRegistred = _eventRegistred.asDriver(
             onErrorRecover: { _ in
                 .empty()
-        }
+
+            }
         )
     }
 

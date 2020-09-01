@@ -1,6 +1,8 @@
 import Foundation
 import UIKit
 import EMSpinnerButton
+
+// swiftlint:disable private_outlet
 class CheckinView: UIView {
     @IBOutlet weak var pictureImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

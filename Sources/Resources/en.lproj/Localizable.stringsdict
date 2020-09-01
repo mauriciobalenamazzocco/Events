@@ -12,5 +12,30 @@
 		<key>NSStringLocalizedFormatKey</key>
 		<string>Ops... Algo deu errado!</string>
 	</dict>
+	<key>ok</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>ok</string>
+	</dict>
+	<key>errorInvalidUrl</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Url da api é invalida</string>
+	</dict>
+	<key>errorParse</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Não foi possivel fazer Parse do objeto</string>
+	</dict>
+	<key>events</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Eventos</string>
+	</dict>
+	<key>registred</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>Registrado</string>
+	</dict>
 </dict>
 </plist>
