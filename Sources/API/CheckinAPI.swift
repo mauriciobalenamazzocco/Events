@@ -3,7 +3,7 @@ import Foundation
 protocol CheckinAPIProtocol {
     typealias CheckinResult = Result<Void, ServiceError>
 
-    func checkin(url:String, id: String, email: String, name: String, completionHandler: @escaping (CheckinResult) -> Void)
+    func checkin(url: String, id: String, email: String, name: String, completionHandler: @escaping (CheckinResult) -> Void)
 }
 
 struct CheckinAPI: CheckinAPIProtocol {
@@ -35,13 +35,12 @@ struct CheckinAPI: CheckinAPIProtocol {
         let encoder = JSONEncoder()
         encoder.outputFormatting = .prettyPrinted
 
-        do {
-            let jsonData = try encoder.encode(checkin)
-            request.httpBody = jsonData
-
-        } catch {
+        guard let jsonData = try? encoder.encode(checkin) else {
             completionHandler(.failure(.parse))
+            return
         }
+
+        request.httpBody = jsonData
 
         let dataTask = urlSession.dataTask(with: request) { data, _, error in
             if let error = error {
@@ -57,7 +56,7 @@ struct CheckinAPI: CheckinAPIProtocol {
                     completionHandler(.success(Void()))
                     return
                 }
-                completionHandler(.failure(.api(NSError(domain: "", code: 500, userInfo: nil))))
+                completionHandler(.failure(.unauthorized))
             }
         }
         dataTask.resume()
