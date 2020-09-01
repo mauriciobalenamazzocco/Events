@@ -12,10 +12,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: UIApplicationDelegate
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
         configureUI()
+        router.trigger(.events)
         router.setRoot(for: mainWindow)
         IQKeyboardManager.shared.enable = true
+
         return true
+
     }
 
     // MARK: Helpers

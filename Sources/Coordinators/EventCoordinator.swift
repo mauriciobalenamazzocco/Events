@@ -38,7 +38,7 @@ class EventCoordinator: NavigationCoordinator<EventCoordinatorRoute> {
             navigation.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         }
 
-        super.init(rootViewController: navigation, initialRoute: .events)
+        super.init(rootViewController: navigation)
     }
 
     override func prepareTransition(for route: EventCoordinatorRoute) -> NavigationTransition {
