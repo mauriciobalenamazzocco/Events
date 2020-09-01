@@ -89,24 +89,15 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 1 storyboards.
   struct storyboard {
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
-    /// Storyboard `Main`.
-    static let main = _R.storyboard.main()
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
     static func launchScreen(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.launchScreen)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIStoryboard(name: "Main", bundle: ...)`
-    static func main(_: Void = ()) -> UIKit.UIStoryboard {
-      return UIKit.UIStoryboard(resource: R.storyboard.main)
     }
     #endif
 
@@ -178,10 +169,24 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.id` struct is generated, and contains static references to accessibility identifiers.
+  struct id {
+    struct eventShimmerCell {
+      /// Accessibility identifier `CommunityShimmerCell`.
+      static let communityShimmerCell: String = "CommunityShimmerCell"
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.image` struct is generated, and contains static references to 3 images.
   struct image {
     /// Image `caution`.
     static let caution = Rswift.ImageResource(bundle: R.hostingBundle, name: "caution")
+    /// Image `eventDefault`.
+    static let eventDefault = Rswift.ImageResource(bundle: R.hostingBundle, name: "eventDefault")
     /// Image `info`.
     static let info = Rswift.ImageResource(bundle: R.hostingBundle, name: "info")
 
@@ -189,6 +194,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "caution", bundle: ..., traitCollection: ...)`
     static func caution(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.caution, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "eventDefault", bundle: ..., traitCollection: ...)`
+    static func eventDefault(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.eventDefault, compatibleWith: traitCollection)
     }
     #endif
 
@@ -202,33 +214,72 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.info` struct is generated, and contains static references to 1 properties.
-  struct info {
-    struct uiApplicationSceneManifest {
-      static let _key = "UIApplicationSceneManifest"
-      static let uiApplicationSupportsMultipleScenes = false
+  /// This `R.nib` struct is generated, and contains static references to 4 nibs.
+  struct nib {
+    /// Nib `CheckinView`.
+    static let checkinView = _R.nib._CheckinView()
+    /// Nib `EventCell`.
+    static let eventCell = _R.nib._EventCell()
+    /// Nib `EventDetailView`.
+    static let eventDetailView = _R.nib._EventDetailView()
+    /// Nib `EventShimmerCell`.
+    static let eventShimmerCell = _R.nib._EventShimmerCell()
 
-      struct uiSceneConfigurations {
-        static let _key = "UISceneConfigurations"
-
-        struct uiWindowSceneSessionRoleApplication {
-          struct defaultConfiguration {
-            static let _key = "Default Configuration"
-            static let uiSceneConfigurationName = infoPlistString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication", "Default Configuration"], key: "UISceneConfigurationName") ?? "Default Configuration"
-            static let uiSceneDelegateClassName = infoPlistString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication", "Default Configuration"], key: "UISceneDelegateClassName") ?? "$(PRODUCT_MODULE_NAME).SceneDelegate"
-            static let uiSceneStoryboardFile = infoPlistString(path: ["UIApplicationSceneManifest", "UISceneConfigurations", "UIWindowSceneSessionRoleApplication", "Default Configuration"], key: "UISceneStoryboardFile") ?? "Main"
-
-            fileprivate init() {}
-          }
-
-          fileprivate init() {}
-        }
-
-        fileprivate init() {}
-      }
-
-      fileprivate init() {}
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "CheckinView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.checkinView) instead")
+    static func checkinView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.checkinView)
     }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "EventCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.eventCell) instead")
+    static func eventCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.eventCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "EventDetailView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.eventDetailView) instead")
+    static func eventDetailView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.eventDetailView)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "EventShimmerCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.eventShimmerCell) instead")
+    static func eventShimmerCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.eventShimmerCell)
+    }
+    #endif
+
+    static func checkinView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CheckinView? {
+      return R.nib.checkinView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CheckinView
+    }
+
+    static func eventCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EventCell? {
+      return R.nib.eventCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EventCell
+    }
+
+    static func eventDetailView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EventDetailView? {
+      return R.nib.eventDetailView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EventDetailView
+    }
+
+    static func eventShimmerCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EventShimmerCell? {
+      return R.nib.eventShimmerCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EventShimmerCell
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `EventShimmerCell`.
+    static let eventShimmerCell: Rswift.ReuseIdentifier<EventShimmerCell> = Rswift.ReuseIdentifier(identifier: "EventShimmerCell")
 
     fileprivate init() {}
   }
@@ -298,18 +349,84 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     #if os(iOS) || os(tvOS)
+    try nib.validate()
+    #endif
+    #if os(iOS) || os(tvOS)
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _CheckinView.validate()
+    }
+
+    struct _CheckinView: Rswift.NibResourceType, Rswift.Validatable {
+      let bundle = R.hostingBundle
+      let name = "CheckinView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> CheckinView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? CheckinView
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "envelope.circle.fill", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'envelope.circle.fill' is used in nib 'CheckinView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "person.crop.circle.fill", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'person.crop.circle.fill' is used in nib 'CheckinView', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "x.circle", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'x.circle' is used in nib 'CheckinView', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "primaryColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'primaryColor' is used in storyboard 'CheckinView', but couldn't be loaded.") }
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _EventCell: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "EventCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EventCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EventCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _EventDetailView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "EventDetailView"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EventDetailView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EventDetailView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _EventShimmerCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = EventShimmerCell
+
+      let bundle = R.hostingBundle
+      let identifier = "EventShimmerCell"
+      let name = "EventShimmerCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> EventShimmerCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? EventShimmerCell
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
       try launchScreen.validate()
-      #endif
-      #if os(iOS) || os(tvOS)
-      try main.validate()
       #endif
     }
 
@@ -319,22 +436,6 @@ struct _R: Rswift.Validatable {
 
       let bundle = R.hostingBundle
       let name = "LaunchScreen"
-
-      static func validate() throws {
-        if #available(iOS 11.0, tvOS 11.0, *) {
-        }
-      }
-
-      fileprivate init() {}
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    struct main: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
-      typealias InitialController = ViewController
-
-      let bundle = R.hostingBundle
-      let name = "Main"
 
       static func validate() throws {
         if #available(iOS 11.0, tvOS 11.0, *) {
