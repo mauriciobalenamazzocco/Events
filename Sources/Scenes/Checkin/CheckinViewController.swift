@@ -97,7 +97,6 @@ class CheckinViewController: UIViewController, BindableType {
 extension CheckinViewController {
     private func render(state: CheckinViewModel.State) {
         switch state {
-
         case .idle:
             break
         case .registering:
@@ -110,6 +109,8 @@ extension CheckinViewController {
             case .urlInvalid:
                 self.showError(message: R.string.localizable.errorInvalidUrl())
             case .api(let error):
+                self.showError(message: error.localizedDescription)
+            case .unauthorized:
                 self.showError(message: error.localizedDescription)
             }
         case .registred:
