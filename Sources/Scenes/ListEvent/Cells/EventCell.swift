@@ -9,6 +9,7 @@ class EventCell: UITableViewCell, BindableType {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet private weak var registredLabel: UILabel!
 
     typealias ViewModelType = EventCellViewModel
      var viewModel: ViewModelType!
@@ -18,6 +19,7 @@ class EventCell: UITableViewCell, BindableType {
     override func awakeFromNib() {
         super.awakeFromNib()
         pictureImageView.styleRounded()
+        registredLabel.isHidden = true
     }
 
     private lazy var picture = Binder<URL?>(pictureImageView) { imageView, url in
@@ -29,13 +31,20 @@ class EventCell: UITableViewCell, BindableType {
         )
     }
 
-    override func prepareForReuse() {
-          super.prepareForReuse()
-          disposeBag = DisposeBag()
-          viewModel.prepareForReuse()
-          pictureImageView.sd_cancelCurrentImageLoad()
-      }
+    private lazy var eventRegistred = Binder<Void>(self) { strongSelf, _ in
+        strongSelf.priceLabel.isHidden = true
+        strongSelf.registredLabel.isHidden = false
+    }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        registredLabel.isHidden = true
+        disposeBag = DisposeBag()
+        viewModel.prepareForReuse()
+        pictureImageView.sd_cancelCurrentImageLoad()
+    }
+
+    
     func bindViewModel() {
           let outputs = viewModel.transform(input:
               .init(
@@ -60,6 +69,10 @@ class EventCell: UITableViewCell, BindableType {
 
         outputs.title
             .drive(titleLabel.rx.text)
+            .disposed(by: disposeBag)
+
+        outputs.eventRegistred
+            .drive(eventRegistred)
             .disposed(by: disposeBag)
       }
 }
