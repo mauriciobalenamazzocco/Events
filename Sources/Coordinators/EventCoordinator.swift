@@ -3,6 +3,15 @@ import XCoordinator
 
 enum EventCoordinatorRoute: Route {
     case events
+    case eventDetail(Occurrence)
+    case close
+    case checkin(
+        eventTitle: String?,
+        eventPrice: Double?,
+        eventDate: String?,
+        eventId: String,
+        eventPicture: URL?
+    )
 }
 
 class EventCoordinator: NavigationCoordinator<EventCoordinatorRoute> {
@@ -43,18 +52,47 @@ class EventCoordinator: NavigationCoordinator<EventCoordinatorRoute> {
                     actionDescription: "",
                     actionBlock: nil
                 ),
-                viewModelFactory: { [weak self] event in
-                    guard let self = self else { return nil }
+                viewModelFactory: { event in
+
                     return EventCellViewModel(event: event)
                 },
                 selectedItem: { [weak self] event in
                     guard let self = self else { return }
-
+                    self.trigger(.eventDetail(event))
                 }
             )
             eventList.title = "Events"
             eventList.bind(feature: ListEventFeature())
             return .push(eventList, animation: nil)
+
+        case .eventDetail(let event):
+            var eventDetailViewContoller = EventDetailViewController()
+            eventDetailViewContoller.bind(to: EventDetailViewModel(event: event, coordinator: self.weakRouter))
+            eventDetailViewContoller.navigationItem.largeTitleDisplayMode = .never
+              return .push(eventDetailViewContoller)
+
+        case .close:
+            return .dismiss()
+
+        case .checkin(
+            eventTitle: let eventTitle,
+            eventPrice: let eventPrice,
+            eventDate: let eventDate,
+            eventId: let eventId,
+            eventPicture: let eventPicture) :
+
+            var checkinViewControler = CheckinViewController()
+            let checkinModel = CheckinViewModel(
+                eventTitle: eventTitle,
+                eventPrice: eventPrice,
+                eventDate: eventDate,
+                eventId: eventId,
+                eventPicture: eventPicture,
+                coordinator: self.weakRouter
+            )
+            checkinViewControler.bind(to: checkinModel)
+
+            return .present(checkinViewControler)
 
         }
     }
