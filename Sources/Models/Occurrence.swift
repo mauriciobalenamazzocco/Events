@@ -1,6 +1,6 @@
 import Foundation
 
-struct Occurrence: Codable {
+struct Occurrence: Codable, Equatable {
     var id: String?
     var date: Double?
     var title: String?
