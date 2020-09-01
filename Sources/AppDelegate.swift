@@ -1,4 +1,5 @@
 import UIKit
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,12 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         configureUI()
         router.setRoot(for: mainWindow)
+        IQKeyboardManager.shared.enable = true
         return true
     }
 
     // MARK: Helpers
 
     private func configureUI() {
+        mainWindow.backgroundColor = .white
         UIView.appearance().overrideUserInterfaceStyle = .light
     }
 

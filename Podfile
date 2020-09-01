@@ -18,8 +18,8 @@ target 'Events' do
   # Coordinator
   pod 'XCoordinator'
 
-  # Image Downloader
-  pod 'Kingfisher'
+  # Image Downloader //Kingfisher //SDSwebImage
+  pod 'SDWebImage'
 
   # Code indentation
   pod 'SwiftLint'
@@ -29,6 +29,10 @@ target 'Events' do
 
   # Constraints
   pod 'VanillaConstraints'
+
+  # Utils
+  pod 'IQKeyboardManagerSwift'
+  pod 'EMSpinnerButton'
 
   target 'EventsTests' do
     inherit! :search_paths
