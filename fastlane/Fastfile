@@ -1,0 +1,39 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Run unit tests"
+  lane :tests do
+    scan(workspace: "Events.xcworkspace", device: "iPhone 8", scheme: "Events", code_coverage: true)
+  
+coverage_files_to_ignore = [
+    'Sources/Resources/*',
+    'Pods/*',
+]
+
+  slather(
+      output_directory: "fastlane/html",
+      workspace: "Events.xcworkspace",
+      html: true,
+      scheme: "Events",
+      proj: "Events.xcodeproj",
+      ignore: coverage_files_to_ignore,
+      verbose: true,
+      show: true
+  )
+  end
+end
