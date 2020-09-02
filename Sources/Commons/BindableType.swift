@@ -31,19 +31,3 @@ extension BindableType where Self: UITableViewCell {
     }
 
 }
-
-// MARK: - UICollectionViewCell
-extension BindableType where Self: UICollectionViewCell {
-    mutating func bind(to model: Self.ViewModelType) {
-        self.viewModel = model
-        bindViewModel()
-    }
-}
-
-// MARK: - UIView
-extension BindableType where Self: UIView {
-    mutating func bind(to model: Self.ViewModelType) {
-        self.viewModel = model
-        bindViewModel()
-    }
-}
