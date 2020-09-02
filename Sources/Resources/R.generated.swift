@@ -181,12 +181,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 3 images.
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
     /// Image `caution`.
     static let caution = Rswift.ImageResource(bundle: R.hostingBundle, name: "caution")
     /// Image `eventDefault`.
     static let eventDefault = Rswift.ImageResource(bundle: R.hostingBundle, name: "eventDefault")
+    /// Image `event`.
+    static let event = Rswift.ImageResource(bundle: R.hostingBundle, name: "event")
     /// Image `info`.
     static let info = Rswift.ImageResource(bundle: R.hostingBundle, name: "info")
 
@@ -194,6 +196,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "caution", bundle: ..., traitCollection: ...)`
     static func caution(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.caution, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "event", bundle: ..., traitCollection: ...)`
+    static func event(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.event, compatibleWith: traitCollection)
     }
     #endif
 
@@ -552,7 +561,9 @@ struct _R: Rswift.Validatable {
       let name = "LaunchScreen"
 
       static func validate() throws {
+        if UIKit.UIImage(named: "event", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'event' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "primaryColor", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'primaryColor' is used in storyboard 'LaunchScreen', but couldn't be loaded.") }
         }
       }
 
