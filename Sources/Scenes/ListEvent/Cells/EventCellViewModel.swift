@@ -36,7 +36,6 @@ class EventCellViewModel: CellViewModelProtocol {
         eventRegistred = _eventRegistred.asDriver(
             onErrorRecover: { _ in
                 .empty()
-
             }
         )
     }
@@ -47,7 +46,6 @@ class EventCellViewModel: CellViewModelProtocol {
         broadcast.onMessage
             .subscribe(onNext: { type in
                 switch type {
-
                 case .eventRegistred(id: let id):
                     if self.eventId == id {
                         self._eventRegistred.accept(Void())
