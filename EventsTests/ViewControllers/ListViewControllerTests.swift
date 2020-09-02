@@ -60,7 +60,6 @@ class ListViewControllerTests: XCTestCase
                 actionBlock: nil
             ),
             viewModelFactory: { event in
-
                 return EventCellViewModel(event: event)
         },
             selectedItem: nil
