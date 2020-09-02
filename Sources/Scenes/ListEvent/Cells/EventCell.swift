@@ -3,12 +3,13 @@ import RxCocoa
 import RxSwift
 import SDWebImage
 
+// swiftlint:disable private_outlet
 class EventCell: UITableViewCell, BindableType {
-    @IBOutlet private weak var pictureImageView: UIImageView!
-    @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var dateLabel: UILabel!
-    @IBOutlet private weak var descriptionLabel: UILabel!
-    @IBOutlet private weak var priceLabel: UILabel!
+    @IBOutlet internal weak var pictureImageView: UIImageView!
+    @IBOutlet internal weak var titleLabel: UILabel!
+    @IBOutlet internal weak var dateLabel: UILabel!
+    @IBOutlet internal weak var descriptionLabel: UILabel!
+    @IBOutlet internal weak var priceLabel: UILabel!
     @IBOutlet private weak var registredLabel: UILabel!
 
     typealias ViewModelType = EventCellViewModel
