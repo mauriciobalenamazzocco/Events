@@ -9,8 +9,6 @@
 import Foundation
 import XCTest
 @testable import Events
-import RxSwift
-import RxTest
 
 class EventDetailViewControllerTests: XCTestCase
 {
