@@ -114,7 +114,6 @@ class CheckinAPITests: XCTestCase
         waitForExpectations(timeout: 1)
 
         // Then
-
         XCTAssert(true)
     }
 
