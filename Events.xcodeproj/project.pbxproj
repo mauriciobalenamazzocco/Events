@@ -10,6 +10,8 @@
 		2CC3F1A6795448305DF2A0B9 /* Pods_EventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841438BA65C98973EB016E9D /* Pods_EventsTests.framework */; };
 		9C44FE096CDE7BF717E4972D /* Pods_Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71AAFC850930C6AD6B7F4EC0 /* Pods_Events.framework */; };
 		C259F69624FFD95800B1E40C /* EventDetalViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C259F69524FFD95800B1E40C /* EventDetalViewControllerTests.swift */; };
+		C259F69824FFE62400B1E40C /* CheckinViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C259F69724FFE62400B1E40C /* CheckinViewControllerTests.swift */; };
+		C259F69B24FFE8D600B1E40C /* EventCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C259F69A24FFE8D600B1E40C /* EventCellTests.swift */; };
 		C25C826B24FC2BE300F8E113 /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C826A24FC2BE300F8E113 /* EventAPI.swift */; };
 		C25C826D24FC2DC400F8E113 /* Occurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C826C24FC2DC400F8E113 /* Occurrence.swift */; };
 		C25C827824FC315500F8E113 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C827624FC315500F8E113 /* URLSessionProtocol.swift */; };
@@ -92,6 +94,8 @@
 		A08CEC4D063014BCF081777B /* Pods-Events-EventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events-EventsUITests.release.xcconfig"; path = "Target Support Files/Pods-Events-EventsUITests/Pods-Events-EventsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A861CC1AD4F80C62DBC3DCB9 /* Pods_Events_EventsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Events_EventsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C259F69524FFD95800B1E40C /* EventDetalViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetalViewControllerTests.swift; sourceTree = "<group>"; };
+		C259F69724FFE62400B1E40C /* CheckinViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewControllerTests.swift; sourceTree = "<group>"; };
+		C259F69A24FFE8D600B1E40C /* EventCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellTests.swift; sourceTree = "<group>"; };
 		C25C826A24FC2BE300F8E113 /* EventAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAPI.swift; sourceTree = "<group>"; };
 		C25C826C24FC2DC400F8E113 /* Occurrence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occurrence.swift; sourceTree = "<group>"; };
 		C25C827624FC315500F8E113 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -204,6 +208,14 @@
 				841438BA65C98973EB016E9D /* Pods_EventsTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C259F69924FFE8BB00B1E40C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C259F69A24FFE8D600B1E40C /* EventCellTests.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		C25C826824FC273B00F8E113 /* API */ = {
@@ -392,6 +404,7 @@
 		C26EC7A324FEC75B00B623C7 /* EventsTests */ = {
 			isa = PBXGroup;
 			children = (
+				C259F69924FFE8BB00B1E40C /* Cell */,
 				C26EC82424FF1BFE00B623C7 /* ViewControllers */,
 				C26EC7B324FEDD5D00B623C7 /* ViewModels */,
 				C27AD21124FDE6640055B879 /* Api */,
@@ -417,6 +430,7 @@
 			children = (
 				C26EC82524FF1C1100B623C7 /* ListViewControllerTests.swift */,
 				C259F69524FFD95800B1E40C /* EventDetalViewControllerTests.swift */,
+				C259F69724FFE62400B1E40C /* CheckinViewControllerTests.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -759,11 +773,13 @@
 				C26EC82224FF183200B623C7 /* EventCellViewModelTests.swift in Sources */,
 				C26EC7B224FED2CB00B623C7 /* CheckinApiTests.swift in Sources */,
 				C26EC82624FF1C1100B623C7 /* ListViewControllerTests.swift in Sources */,
+				C259F69824FFE62400B1E40C /* CheckinViewControllerTests.swift in Sources */,
 				C26EC7B924FEE20000B623C7 /* CheckinViewModelTests.swift in Sources */,
 				C26EC7B724FEDFD900B623C7 /* CheckinTest.swift in Sources */,
 				C259F69624FFD95800B1E40C /* EventDetalViewControllerTests.swift in Sources */,
 				C26EC81D24FEF97A00B623C7 /* CheckinAPIMock.swift in Sources */,
 				C26EC82024FF155C00B623C7 /* EventDetailViewModelTest.swift in Sources */,
+				C259F69B24FFE8D600B1E40C /* EventCellTests.swift in Sources */,
 				C26EC7AD24FECB3300B623C7 /* EventAPITests.swift in Sources */,
 				C26EC82824FF1DFE00B623C7 /* EventAPIMock.swift in Sources */,
 			);
