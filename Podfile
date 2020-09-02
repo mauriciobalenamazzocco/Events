@@ -36,11 +36,8 @@ target 'Events' do
 
   target 'EventsTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'RxTest'
+    pod 'RxBlocking'
   end
-
-  target 'EventsUITests' do
-    # Pods for testing
-  end
-
+  
 end

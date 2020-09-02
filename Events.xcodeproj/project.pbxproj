@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CC3F1A6795448305DF2A0B9 /* Pods_EventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841438BA65C98973EB016E9D /* Pods_EventsTests.framework */; };
 		9C44FE096CDE7BF717E4972D /* Pods_Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71AAFC850930C6AD6B7F4EC0 /* Pods_Events.framework */; };
 		C25C826B24FC2BE300F8E113 /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C826A24FC2BE300F8E113 /* EventAPI.swift */; };
 		C25C826D24FC2DC400F8E113 /* Occurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C826C24FC2DC400F8E113 /* Occurrence.swift */; };
@@ -47,11 +48,18 @@
 		C26003EC24FBF947004A5253 /* StatusBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003EB24FBF947004A5253 /* StatusBackgroundView.swift */; };
 		C26003EE24FC12B6004A5253 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003ED24FC12B6004A5253 /* R.generated.swift */; };
 		C26003F124FC1372004A5253 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = C26003F324FC1372004A5253 /* Localizable.stringsdict */; };
-		C26EC7A524FEC75B00B623C7 /* EventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EC7A424FEC75B00B623C7 /* EventsTests.swift */; };
 		C26EC7AD24FECB3300B623C7 /* EventAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27AD21624FE88BE0055B879 /* EventAPITests.swift */; };
 		C26EC7AE24FECB3900B623C7 /* EventsJsonMock.txt in Resources */ = {isa = PBXBuildFile; fileRef = C27AD21224FDE67D0055B879 /* EventsJsonMock.txt */; };
 		C26EC7AF24FECB3B00B623C7 /* EventJsonMock.txt in Resources */ = {isa = PBXBuildFile; fileRef = C27AD21324FDE67D0055B879 /* EventJsonMock.txt */; };
 		C26EC7B224FED2CB00B623C7 /* CheckinApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EC7B124FED2CB00B623C7 /* CheckinApiTests.swift */; };
+		C26EC7B524FEDDC500B623C7 /* OcurrenceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EC7B424FEDDC500B623C7 /* OcurrenceTest.swift */; };
+		C26EC7B724FEDFD900B623C7 /* CheckinTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EC7B624FEDFD900B623C7 /* CheckinTest.swift */; };
+		C26EC7B924FEE20000B623C7 /* CheckinViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EC7B824FEE20000B623C7 /* CheckinViewModelTests.swift */; };
+		C26EC81D24FEF97A00B623C7 /* CheckinAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EC81C24FEF97A00B623C7 /* CheckinAPIMock.swift */; };
+		C26EC82024FF155C00B623C7 /* EventDetailViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EC81F24FF155C00B623C7 /* EventDetailViewModelTest.swift */; };
+		C26EC82224FF183200B623C7 /* EventCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EC82124FF183200B623C7 /* EventCellViewModelTests.swift */; };
+		C26EC82624FF1C1100B623C7 /* ListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EC82524FF1C1100B623C7 /* ListViewControllerTests.swift */; };
+		C26EC82824FF1DFE00B623C7 /* EventAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26EC82724FF1DFE00B623C7 /* EventAPIMock.swift */; };
 		C27AD20C24FDB2EC0055B879 /* EventBroadcastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27AD20B24FDB2EC0055B879 /* EventBroadcastMessage.swift */; };
 		C27AD20E24FDC62D0055B879 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27AD20D24FDC62D0055B879 /* UITextField+Extension.swift */; };
 		C2827A3A24FD547700454BD3 /* CheckinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2827A3924FD547700454BD3 /* CheckinViewModel.swift */; };
@@ -125,9 +133,16 @@
 		C26003ED24FC12B6004A5253 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		C26003F224FC1372004A5253 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		C26EC7A224FEC75B00B623C7 /* EventsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EventsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C26EC7A424FEC75B00B623C7 /* EventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTests.swift; sourceTree = "<group>"; };
 		C26EC7A624FEC75B00B623C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C26EC7B124FED2CB00B623C7 /* CheckinApiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinApiTests.swift; sourceTree = "<group>"; };
+		C26EC7B424FEDDC500B623C7 /* OcurrenceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OcurrenceTest.swift; sourceTree = "<group>"; };
+		C26EC7B624FEDFD900B623C7 /* CheckinTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinTest.swift; sourceTree = "<group>"; };
+		C26EC7B824FEE20000B623C7 /* CheckinViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinViewModelTests.swift; sourceTree = "<group>"; };
+		C26EC81C24FEF97A00B623C7 /* CheckinAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinAPIMock.swift; sourceTree = "<group>"; };
+		C26EC81F24FF155C00B623C7 /* EventDetailViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewModelTest.swift; sourceTree = "<group>"; };
+		C26EC82124FF183200B623C7 /* EventCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellViewModelTests.swift; sourceTree = "<group>"; };
+		C26EC82524FF1C1100B623C7 /* ListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewControllerTests.swift; sourceTree = "<group>"; };
+		C26EC82724FF1DFE00B623C7 /* EventAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAPIMock.swift; sourceTree = "<group>"; };
 		C27AD20B24FDB2EC0055B879 /* EventBroadcastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBroadcastMessage.swift; sourceTree = "<group>"; };
 		C27AD20D24FDC62D0055B879 /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		C27AD21224FDE67D0055B879 /* EventsJsonMock.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EventsJsonMock.txt; sourceTree = "<group>"; };
@@ -157,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CC3F1A6795448305DF2A0B9 /* Pods_EventsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,13 +399,32 @@
 		C26EC7A324FEC75B00B623C7 /* EventsTests */ = {
 			isa = PBXGroup;
 			children = (
+				C26EC82424FF1BFE00B623C7 /* ViewControllers */,
+				C26EC7B324FEDD5D00B623C7 /* ViewModels */,
 				C27AD21124FDE6640055B879 /* Api */,
 				C27AD21024FDE65C0055B879 /* Models */,
 				C27AD20F24FDE6500055B879 /* Mocks */,
-				C26EC7A424FEC75B00B623C7 /* EventsTests.swift */,
 				C26EC7A624FEC75B00B623C7 /* Info.plist */,
 			);
 			path = EventsTests;
+			sourceTree = "<group>";
+		};
+		C26EC7B324FEDD5D00B623C7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C26EC7B824FEE20000B623C7 /* CheckinViewModelTests.swift */,
+				C26EC81F24FF155C00B623C7 /* EventDetailViewModelTest.swift */,
+				C26EC82124FF183200B623C7 /* EventCellViewModelTests.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C26EC82424FF1BFE00B623C7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				C26EC82524FF1C1100B623C7 /* ListViewControllerTests.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		C27AD20A24FDB2BA0055B879 /* Services */ = {
@@ -405,6 +440,8 @@
 			children = (
 				C27AD21224FDE67D0055B879 /* EventsJsonMock.txt */,
 				C27AD21324FDE67D0055B879 /* EventJsonMock.txt */,
+				C26EC81C24FEF97A00B623C7 /* CheckinAPIMock.swift */,
+				C26EC82724FF1DFE00B623C7 /* EventAPIMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -412,6 +449,8 @@
 		C27AD21024FDE65C0055B879 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C26EC7B424FEDDC500B623C7 /* OcurrenceTest.swift */,
+				C26EC7B624FEDFD900B623C7 /* CheckinTest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -496,9 +535,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C26EC7A924FEC75B00B623C7 /* Build configuration list for PBXNativeTarget "EventsTests" */;
 			buildPhases = (
+				9EFE497731D7142D33B16277 /* [CP] Check Pods Manifest.lock */,
 				C26EC79E24FEC75B00B623C7 /* Sources */,
 				C26EC79F24FEC75B00B623C7 /* Frameworks */,
 				C26EC7A024FEC75B00B623C7 /* Resources */,
+				588D0D38560CE89182FFEE10 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -619,6 +660,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		588D0D38560CE89182FFEE10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EventsTests/Pods-EventsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EventsTests/Pods-EventsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EventsTests/Pods-EventsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9CC28621B9DBB477B7BC8281 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -634,6 +692,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Events/Pods-Events-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EFE497731D7142D33B16277 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EventsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C26003C224FBF0E3004A5253 /* Swiftlint */ = {
@@ -681,9 +761,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C26EC7B524FEDDC500B623C7 /* OcurrenceTest.swift in Sources */,
+				C26EC82224FF183200B623C7 /* EventCellViewModelTests.swift in Sources */,
 				C26EC7B224FED2CB00B623C7 /* CheckinApiTests.swift in Sources */,
-				C26EC7A524FEC75B00B623C7 /* EventsTests.swift in Sources */,
+				C26EC82624FF1C1100B623C7 /* ListViewControllerTests.swift in Sources */,
+				C26EC7B924FEE20000B623C7 /* CheckinViewModelTests.swift in Sources */,
+				C26EC7B724FEDFD900B623C7 /* CheckinTest.swift in Sources */,
+				C26EC81D24FEF97A00B623C7 /* CheckinAPIMock.swift in Sources */,
+				C26EC82024FF155C00B623C7 /* EventDetailViewModelTest.swift in Sources */,
 				C26EC7AD24FECB3300B623C7 /* EventAPITests.swift in Sources */,
+				C26EC82824FF1DFE00B623C7 /* EventAPIMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +857,7 @@
 /* Begin XCBuildConfiguration section */
 		C26EC7AA24FEC75B00B623C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1C4D0B92E3EE1BE530C5028 /* Pods-EventsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -791,6 +879,7 @@
 		};
 		C26EC7AB24FEC75B00B623C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7833734677C110D8DA90DD44 /* Pods-EventsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
