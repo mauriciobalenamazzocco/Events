@@ -9,9 +9,11 @@ class EventDetailViewController: UIViewController, BindableType {
     typealias ViewModelType = EventDetailViewModel
     var viewModel: ViewModelType!
 
-    @IBOutlet internal var eventDetailView: EventDetailView!
-
     var disposeBag = DisposeBag()
+
+    internal lazy var eventDetailView: EventDetailView = {
+        return EventDetailView.initFromNib()
+    }()
 
     private lazy var picture = Binder<URL?>(eventDetailView) { eventDetailView, url in
         eventDetailView.pictureImageView.sd_setImage(
@@ -28,6 +30,10 @@ class EventDetailViewController: UIViewController, BindableType {
         eventDetailView.checkinButton.backgroundColor = .lightGray
         eventDetailView.checkinButton.setTitle(R.string.localizable.registred(), for: .normal)
         eventDetailView.checkinButton.layer.cornerRadius = 10
+    }
+
+    override func loadView() {
+        view = eventDetailView
     }
 
     func bindViewModel() {
