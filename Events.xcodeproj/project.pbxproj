@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2CC3F1A6795448305DF2A0B9 /* Pods_EventsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 841438BA65C98973EB016E9D /* Pods_EventsTests.framework */; };
 		9C44FE096CDE7BF717E4972D /* Pods_Events.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71AAFC850930C6AD6B7F4EC0 /* Pods_Events.framework */; };
+		C259F69624FFD95800B1E40C /* EventDetalViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C259F69524FFD95800B1E40C /* EventDetalViewControllerTests.swift */; };
 		C25C826B24FC2BE300F8E113 /* EventAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C826A24FC2BE300F8E113 /* EventAPI.swift */; };
 		C25C826D24FC2DC400F8E113 /* Occurrence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C826C24FC2DC400F8E113 /* Occurrence.swift */; };
 		C25C827824FC315500F8E113 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25C827624FC315500F8E113 /* URLSessionProtocol.swift */; };
@@ -36,13 +37,10 @@
 		C26003D124FBF622004A5253 /* UITableViewShimmerDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003CE24FBF622004A5253 /* UITableViewShimmerDatasource.swift */; };
 		C26003D224FBF622004A5253 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003CF24FBF622004A5253 /* ListViewController.swift */; };
 		C26003D324FBF622004A5253 /* ListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003D024FBF622004A5253 /* ListFeature.swift */; };
-		C26003D924FBF6BC004A5253 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003D724FBF6BC004A5253 /* PlaceholderView.swift */; };
 		C26003DA24FBF6BC004A5253 /* PlaceholderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003D824FBF6BC004A5253 /* PlaceholderCell.swift */; };
 		C26003E024FBF6D5004A5253 /* UITableView+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003DB24FBF6D5004A5253 /* UITableView+Identifiable.swift */; };
 		C26003E124FBF6D5004A5253 /* NibIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003DC24FBF6D5004A5253 /* NibIdentifiable.swift */; };
 		C26003E224FBF6D5004A5253 /* ClassIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003DD24FBF6D5004A5253 /* ClassIdentifiable.swift */; };
-		C26003E324FBF6D5004A5253 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003DE24FBF6D5004A5253 /* StoryboardIdentifiable.swift */; };
-		C26003E424FBF6D5004A5253 /* UICollectionView+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003DF24FBF6D5004A5253 /* UICollectionView+Identifiable.swift */; };
 		C26003E724FBF759004A5253 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003E624FBF759004A5253 /* UIView+Extension.swift */; };
 		C26003E924FBF87C004A5253 /* BindableType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003E824FBF87C004A5253 /* BindableType.swift */; };
 		C26003EC24FBF947004A5253 /* StatusBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26003EB24FBF947004A5253 /* StatusBackgroundView.swift */; };
@@ -93,6 +91,7 @@
 		841438BA65C98973EB016E9D /* Pods_EventsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EventsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08CEC4D063014BCF081777B /* Pods-Events-EventsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Events-EventsUITests.release.xcconfig"; path = "Target Support Files/Pods-Events-EventsUITests/Pods-Events-EventsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A861CC1AD4F80C62DBC3DCB9 /* Pods_Events_EventsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Events_EventsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C259F69524FFD95800B1E40C /* EventDetalViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetalViewControllerTests.swift; sourceTree = "<group>"; };
 		C25C826A24FC2BE300F8E113 /* EventAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAPI.swift; sourceTree = "<group>"; };
 		C25C826C24FC2DC400F8E113 /* Occurrence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Occurrence.swift; sourceTree = "<group>"; };
 		C25C827624FC315500F8E113 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
@@ -120,13 +119,10 @@
 		C26003CE24FBF622004A5253 /* UITableViewShimmerDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewShimmerDatasource.swift; sourceTree = "<group>"; };
 		C26003CF24FBF622004A5253 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		C26003D024FBF622004A5253 /* ListFeature.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListFeature.swift; sourceTree = "<group>"; };
-		C26003D724FBF6BC004A5253 /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		C26003D824FBF6BC004A5253 /* PlaceholderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderCell.swift; sourceTree = "<group>"; };
 		C26003DB24FBF6D5004A5253 /* UITableView+Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Identifiable.swift"; sourceTree = "<group>"; };
 		C26003DC24FBF6D5004A5253 /* NibIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibIdentifiable.swift; sourceTree = "<group>"; };
 		C26003DD24FBF6D5004A5253 /* ClassIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassIdentifiable.swift; sourceTree = "<group>"; };
-		C26003DE24FBF6D5004A5253 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
-		C26003DF24FBF6D5004A5253 /* UICollectionView+Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Identifiable.swift"; sourceTree = "<group>"; };
 		C26003E624FBF759004A5253 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C26003E824FBF87C004A5253 /* BindableType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BindableType.swift; sourceTree = "<group>"; };
 		C26003EB24FBF947004A5253 /* StatusBackgroundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusBackgroundView.swift; sourceTree = "<group>"; };
@@ -359,7 +355,6 @@
 			isa = PBXGroup;
 			children = (
 				C26003D824FBF6BC004A5253 /* PlaceholderCell.swift */,
-				C26003D724FBF6BC004A5253 /* PlaceholderView.swift */,
 			);
 			path = Shimmer;
 			sourceTree = "<group>";
@@ -369,8 +364,6 @@
 			children = (
 				C26003DD24FBF6D5004A5253 /* ClassIdentifiable.swift */,
 				C26003DC24FBF6D5004A5253 /* NibIdentifiable.swift */,
-				C26003DE24FBF6D5004A5253 /* StoryboardIdentifiable.swift */,
-				C26003DF24FBF6D5004A5253 /* UICollectionView+Identifiable.swift */,
 				C26003DB24FBF6D5004A5253 /* UITableView+Identifiable.swift */,
 			);
 			path = Identifiable;
@@ -423,6 +416,7 @@
 			isa = PBXGroup;
 			children = (
 				C26EC82524FF1C1100B623C7 /* ListViewControllerTests.swift */,
+				C259F69524FFD95800B1E40C /* EventDetalViewControllerTests.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -767,6 +761,7 @@
 				C26EC82624FF1C1100B623C7 /* ListViewControllerTests.swift in Sources */,
 				C26EC7B924FEE20000B623C7 /* CheckinViewModelTests.swift in Sources */,
 				C26EC7B724FEDFD900B623C7 /* CheckinTest.swift in Sources */,
+				C259F69624FFD95800B1E40C /* EventDetalViewControllerTests.swift in Sources */,
 				C26EC81D24FEF97A00B623C7 /* CheckinAPIMock.swift in Sources */,
 				C26EC82024FF155C00B623C7 /* EventDetailViewModelTest.swift in Sources */,
 				C26EC7AD24FECB3300B623C7 /* EventAPITests.swift in Sources */,
@@ -784,7 +779,6 @@
 				C25C828024FC3FB100F8E113 /* Partial.swift in Sources */,
 				C27AD20E24FDC62D0055B879 /* UITextField+Extension.swift in Sources */,
 				C25C828924FC561300F8E113 /* ReusableProtocol.swift in Sources */,
-				C26003E424FBF6D5004A5253 /* UICollectionView+Identifiable.swift in Sources */,
 				C25C82AA24FC94DC00F8E113 /* EventDetailViewModel.swift in Sources */,
 				C26003E224FBF6D5004A5253 /* ClassIdentifiable.swift in Sources */,
 				C25C829F24FC6A3D00F8E113 /* EventCoordinator.swift in Sources */,
@@ -798,7 +792,6 @@
 				C2827A3A24FD547700454BD3 /* CheckinViewModel.swift in Sources */,
 				C25C828824FC561300F8E113 /* CellViewModelProtocol.swift in Sources */,
 				C26003E024FBF6D5004A5253 /* UITableView+Identifiable.swift in Sources */,
-				C26003E324FBF6D5004A5253 /* StoryboardIdentifiable.swift in Sources */,
 				C26003D224FBF622004A5253 /* ListViewController.swift in Sources */,
 				C25C827824FC315500F8E113 /* URLSessionProtocol.swift in Sources */,
 				C26003D324FBF622004A5253 /* ListFeature.swift in Sources */,
@@ -817,7 +810,6 @@
 				C27AD20C24FDB2EC0055B879 /* EventBroadcastMessage.swift in Sources */,
 				C2827A3E24FD66FE00454BD3 /* CheckinAPI.swift in Sources */,
 				C2827A3C24FD665600454BD3 /* API.swift in Sources */,
-				C26003D924FBF6BC004A5253 /* PlaceholderView.swift in Sources */,
 				C25C829424FC62B900F8E113 /* UIImageView+Extension.swift in Sources */,
 				C2827A4024FD683B00454BD3 /* Checkin.swift in Sources */,
 				C25C82A124FC6EDB00F8E113 /* AppDelegate.swift in Sources */,

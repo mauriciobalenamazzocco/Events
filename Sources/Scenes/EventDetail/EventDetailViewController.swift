@@ -9,7 +9,7 @@ class EventDetailViewController: UIViewController, BindableType {
     typealias ViewModelType = EventDetailViewModel
     var viewModel: ViewModelType!
 
-    @IBOutlet private var eventDetailView: EventDetailView!
+    @IBOutlet internal var eventDetailView: EventDetailView!
 
     var disposeBag = DisposeBag()
 
