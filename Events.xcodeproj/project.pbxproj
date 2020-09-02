@@ -157,7 +157,7 @@
 		C288CAE824FD7C3C00C82C7F /* CheckinView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckinView.xib; sourceTree = "<group>"; };
 		C288CAEA24FD7EBD00C82C7F /* CheckinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinView.swift; sourceTree = "<group>"; };
 		C288CAEC24FDA11300C82C7F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		C2A4992C24FAF0BE00A51788 /* Events.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Events.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2A4992C24FAF0BE00A51788 /* Eventos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Eventos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A4993824FAF0C000A51788 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2A4993B24FAF0C000A51788 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2A4993D24FAF0C000A51788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -498,7 +498,7 @@
 		C2A4992D24FAF0BE00A51788 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C2A4992C24FAF0BE00A51788 /* Events.app */,
+				C2A4992C24FAF0BE00A51788 /* Eventos.app */,
 				C26EC7A224FEC75B00B623C7 /* EventsTests.xctest */,
 			);
 			name = Products;
@@ -577,7 +577,7 @@
 			);
 			name = Events;
 			productName = Events;
-			productReference = C2A4992C24FAF0BE00A51788 /* Events.app */;
+			productReference = C2A4992C24FAF0BE00A51788 /* Eventos.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1034,7 +1034,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.Events;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eventos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1053,7 +1053,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mobile.Events;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Eventos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
