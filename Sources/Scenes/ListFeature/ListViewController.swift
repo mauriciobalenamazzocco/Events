@@ -73,7 +73,7 @@ where
     private let viewModelFactory: ViewModelFactoryType
     private let didSelectItem: ((TItem) -> Void)?
     private var datasource = ListPage<TItem>.first(items: [], hasNext: false)
-    private var feature: ListFeature<TItem>!
+    internal var feature: ListFeature<TItem>!
 
     init(_ configuration: ListViewController.EmptyListConfiguration,
          viewModelFactory: @escaping ViewModelFactoryType,
@@ -133,7 +133,7 @@ where
         backgroundView.update(
             topImage: emptyListConfiguration.icon ?? R.image.info()!,
             title: emptyListConfiguration.title ?? "",
-            subtitle: emptyListConfiguration.subtitle, 
+            subtitle: emptyListConfiguration.subtitle ,
             buttonDescription: emptyListConfiguration.actionDescription ?? ""
         )
         backgroundView.buttonAction = emptyListConfiguration.actionBlock
@@ -191,7 +191,6 @@ where
             itemsTableView.isHidden = true
             refreshControl.endRefreshing()
             loadingTableView.isHidden = true
-
         }
     }
 
