@@ -10,7 +10,7 @@ class CheckinViewController: UIViewController, BindableType {
     typealias ViewModelType = CheckinViewModel
     var viewModel: ViewModelType!
 
-    private lazy var checkinView: CheckinView = {
+    internal lazy var checkinView: CheckinView = {
         return CheckinView.initFromNib()
     }()
 
