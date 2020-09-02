@@ -97,7 +97,6 @@ class EventAPITests: XCTestCase
         waitForExpectations(timeout: 1)
 
         // Then
-
         XCTAssertEqual(ocurrenceList.count, 3, "fetchEvents() should return a list of event")
     }
 
@@ -133,10 +132,9 @@ class EventAPITests: XCTestCase
         // Given
         let urlSessionMock = URLSessionMock()
         urlSessionMock.data = Data()
+
         // When
-
         eventAPIProtocol =  EventAPI(urlSession: urlSessionMock)
-
 
         var serviceErrorResult: ServiceError!
         let expect = expectation(description: "Wait for fetchEvents() to return")
@@ -184,7 +182,6 @@ class EventAPITests: XCTestCase
         waitForExpectations(timeout: 1.2)
 
         // Then
-
         XCTAssert(eventTest != nil, "fetchEventDetail() should return event" )
     }
 

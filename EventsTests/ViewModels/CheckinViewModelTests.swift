@@ -215,9 +215,5 @@ class CheckinViewModelTests: XCTestCase {
         waitForExpectations(timeout: 1)
 
     }
-
-
-
-
 }
 
